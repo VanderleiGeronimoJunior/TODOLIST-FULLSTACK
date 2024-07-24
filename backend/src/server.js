@@ -1,6 +1,8 @@
 const app = require('./app')
+require('dotenv').config()
 
+const PORT = process.env.PORT || 3333
 
-const server = () => console.log('Server running or port 3333')
+const server = () => console.log(`Server running or port ${PORT}`)
 
-app.listen(3333, server)
+app.listen(PORT, server)
